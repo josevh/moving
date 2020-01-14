@@ -79,6 +79,10 @@ description: > # this means to ignore newlines until "show_excerpts:"
 favicon: "./favicon.ico" # set the favicon of the site 
 
 show_excerpts: false # set to true to show excerpts on the homepage
+
+# Enable Disqus comments by inputting the shortname
+# disqus:
+#   shortname: 
   
 # Moving date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this

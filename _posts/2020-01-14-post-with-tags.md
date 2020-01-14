@@ -4,6 +4,7 @@ title: "Post with tags"
 categories: misc
 author: Jose Herrera
 tags: [lorem, tagged, winter]
+comments: false
 ---
 
 # First heading
