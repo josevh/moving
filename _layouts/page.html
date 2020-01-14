@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<head>
+    <title>{{ page.title }}</title>
+</head>
+<header class="post-header">
+    <div class="post-back">
+        <a class="black-link" href="{{ "/" | relative_url }}">
+        ← {{ site.moving.back_to }}
+        </a>
+    </div>
+    <h1 class="post-title p-name">
+        {{ page.title | escape }}
+    </h1>
+</header>
+<div class="main-content">
+    {{ content }}
+</div>
