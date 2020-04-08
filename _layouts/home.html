@@ -12,7 +12,33 @@ layout: default
   </div>
 
   {%- if site.posts.size > 0 -%}
-    {% include post_list.liquid post_list=site.posts %}
+    {%- if site.paginate -%}
+      {%- assign posts = paginator.posts -%}
+    {%- else -%}
+      {%- assign posts = site.posts -%}
+    {%- endif -%}
+    {% include post_list.liquid post_list=posts %}
   {%- endif -%}
 </div>
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">«</a>
+  {% else %}
+    <span class="previous">«</span>
+  {% endif %}
+
+  <span class="page_number">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">»</a>
+  {% else %}
+    <span class="next ">»</span>
+  {% endif %}
+</div>
+{% endif %}
  {{ content }}

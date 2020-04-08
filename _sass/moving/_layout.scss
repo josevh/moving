@@ -344,3 +344,21 @@
     margin-top: 2rem;
   }
 }
+
+/**
+ * Pagination
+ */
+.pagination {
+  margin-top: 32px;
+
+  .previous, .next {
+    padding: 8px 16px;
+  }
+  .page_number {
+    padding: 8px 16px;
+  }
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
